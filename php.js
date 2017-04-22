@@ -61,13 +61,13 @@ window.php = {
 	php6: function(){
 		$("#php6").html("<h1 class='ui header'>PHP json encode and decode</h1>" +
 						"<div class='ui segment'>" +
-							"<p> PHP array and object cannot be 'echo', the only thing PHP can 'echo' is a string, so if we will echo an array or an object we have to use 'json_encode'</p>" +
+							"<p> PHP array and object cannot be 'echo', the only thing PHP can 'echo' is a string and integer, so if we will echo an array or an object we have to use 'json_encode'</p>" +
 						"</div>" +
 						"<div class='ui inverted segment'>" +
 							"<p> Example:</br>< ?php</br>$array = array('gio', 'dens', 'kenneth'); //create an array with 3 values, it will be ['gio', 'dens', 'kenneth']</br>echo json_encode($array); //this will echo ['gio', 'dens', 'kenneth'] AS IS string.</br>?> </p>" +
 						"</div>" +
 						"<div class='ui segment'>" +
-							"<p> PHP '$_GET' and '$_POST' can only accept string values, so if PHP receives an array or an object, surely that array/object is converted to string, so in this case we have to use 'json_decode'</p>" +
+							"<p> PHP '$_GET' and '$_POST' can only accept string and integer values, so if PHP receives an array or an object, surely that array/object is converted to string, so in this case we have to use 'json_decode'</p>" +
 						"</div>" +
 						"<div class='ui inverted segment'>" +
 							"<p> Example:</br>< ?php</br>$data = file_get_contents('php://input'); // this syntax accepts string itself, array and objects as string, unlike '$_POST' and '$_GET' only accepts a single data string</br>$result = json_decode($data); //this will convert a 'stringed object/array' to a 'real object/array'</br>?> </p>" +
